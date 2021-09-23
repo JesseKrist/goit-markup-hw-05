@@ -18,7 +18,11 @@ body {
 * {
   margin: 0px;
   padding: 0px;
-  transition: all 250ms ease;
+}
+
+a {
+  transition-property: color;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -71,7 +75,7 @@ header {
   display: block;
   width: 0px;
   height: 4px;
-  background: #2196F3;
+  background: #2196f3;
   position: relative;
   top: 29px;
   border-radius: 2px;
@@ -80,7 +84,6 @@ header {
 .current-page::after {
   width: 100%;
 }
-
 
 .ph-number {
   margin-left: 50px;
@@ -248,6 +251,8 @@ nav a:focus,
   cursor: pointer;
   border: none;
   margin-top: 30px;
+  transition: background-color, 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slogan-btn-order:hover {
@@ -339,6 +344,8 @@ footer {
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+  transition: background-color, 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ftr-social-items a:hover {
@@ -377,10 +384,13 @@ footer h3 {
   font-style: normal;
   text-align: center;
   color: var(--nero-color);
-  background: var(--ghost_white-color);
+  background-color: var(--ghost_white-color);
   border-radius: 4px;
   cursor: pointer;
   border: none;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons-list button:hover,
@@ -390,6 +400,9 @@ footer h3 {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   color: var(--white-color);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works-link h3 {
@@ -440,6 +453,8 @@ footer h3 {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   cursor: pointer;
+  transition: box-shadow 250ms ease;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-link-item:hover {
@@ -461,9 +476,10 @@ footer h3 {
   height: 294px;
   background: rgba(33, 150, 243, 0.9);
   text-align: start;
-  visibility: hidden;
   transform: translateY(100%);
-  z-index: 1;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding: 63px 24px 63px 24px;
 }
 
@@ -480,7 +496,9 @@ footer h3 {
 
 .work-link-item:hover .item-slide-card {
   transform: translateY(0);
-  visibility: visible;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .antenna {
@@ -516,6 +534,8 @@ footer h3 {
   justify-content: center;
   border-radius: 50%;
   color: #afb1b8;
+  transition: background-color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item a:hover {
@@ -548,6 +568,8 @@ footer h3 {
   box-sizing: border-box;
   border-radius: 4px;
   color: #afb1b8;
+  transition: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item a:hover {
@@ -555,23 +577,23 @@ footer h3 {
   border: 1px solid var(--dodger_blue-color);
 }
 
-
-.modal {
+.backdrop {
   width: 100%;
-  height: 1200px;
   background: rgba(0, 0, 0, 0.2);
   position: fixed;
   padding: 221px 0px 222px 0px;
 }
 
-.inside {
+.moadal {
   width: 528px;
-height: 581px;
-background: #FFFFFF;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
-margin-left: auto;
-margin-right: auto;
+  height: 581px;
+  text-align: end;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .is-hidden {
@@ -579,7 +601,7 @@ margin-right: auto;
   pointer-events: none;
 }
 
-.modal {
+.backdrop {
   z-index: 3;
 }
 
@@ -591,11 +613,11 @@ margin-right: auto;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #FFFFFF;
-border: 1px solid rgba(0, 0, 0, 0.1);
-box-sizing: border-box;
-margin: 8px 8px 0px 0px;
-cursor: pointer;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 8px 8px 0px 0px;
+  cursor: pointer;
 }
 
 .card-container {
@@ -604,21 +626,19 @@ cursor: pointer;
 
 .what-wedo-description {
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: 3px;
   width: 370px;
   height: 70px;
   background: rgba(47, 48, 58, 0.8);
-  font-family: Roboto;
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: 16px;
-text-align: center;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-
-color: #FFFFFF;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
 }

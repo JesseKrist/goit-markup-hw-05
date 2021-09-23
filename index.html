@@ -22,11 +22,7 @@
   </head>
 
   <body>
-    <div class="modal is-hidden" data-modal>
-      <div class="inside">
-        <button class="close-moadal" type="button" data-modal-close ><svg class="icon icon-cancel" width="11px" height="11px"><use xlink:href="./img/icons.svg#icon-cancel"></use></svg></button>
-      </div>
-    </div>
+
     <!-- Header Section -->
     <header>
       <div class="container adjust">
@@ -65,6 +61,11 @@
       <section class="section slogan">
         <h1 class="slogan-title">Эффективные решения для вашего бизнеса</h1>
         <button class="slogan-btn-order" type="button" data-modal-open >Заказать услугу</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="moadal">
+            <button class="close-moadal" type="button" data-modal-close ><svg class="icon icon-cancel" width="11px" height="11px"><use xlink:href="./img/icons.svg#icon-cancel"></use></svg></button>
+          </div>
+        </div>
       </section>
       <section class="section criterion">
         <h2 class="semantical">Semantical H2</h2>

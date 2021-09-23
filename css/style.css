@@ -582,6 +582,9 @@ footer h3 {
   background: rgba(0, 0, 0, 0.2);
   position: fixed;
   padding: 221px 0px 222px 0px;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .moadal {
@@ -599,6 +602,9 @@ footer h3 {
 .is-hidden {
   opacity: 0;
   pointer-events: none;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
